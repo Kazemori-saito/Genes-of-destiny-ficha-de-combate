@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Combate</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sistema de Combate - Estilos</h1>
+
+    <!-- Área dos Personagens -->
+    <div class="character-info">
+      <div id="player">
+        <h2>Jogador</h2>
+        <p><strong>Estamina:</strong> <span id="player-stamina">120</span></p>
+        <p><strong>Estilo Atual:</strong> <span id="player-style">Tático</span></p>
+        <button onclick="changeStyle('player', 'Tático')">Tático</button>
+        <button onclick="changeStyle('player', 'Defensivo')">Defensivo</button>
+        <button onclick="changeStyle('player', 'Agressivo')">Agressivo</button>
+        <button onclick="changeStyle('player', 'Fúria')">Fúria</button>
+      </div>
+      
+      <div id="enemy">
+        <h2>Inimigo</h2>
+        <p><strong>Estamina:</strong> <span id="enemy-stamina">60</span></p>
+      </div>
+    </div>
+
+    <!-- Área de Combate -->
+    <div class="combat-actions">
+      <h2>Ações</h2>
+      <button onclick="performAction('player', 'attack')">Atacar</button>
+      <button onclick="performAction('player', 'defend')">Defender</button>
+    </div>
+
+    <!-- Logs do Combate -->
+    <div class="combat-log">
+      <h2>Log de Combate</h2>
+      <ul id="log"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
